@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Perguntar
+                            </div>
+                            <div class="card-body">
+                                <form action="/salvarpergunta" method="POST">
+                                    <div class="mb-3">
+                                        <label for="titulo" class="form-label">titulo</label>
+                                        <input type="text" class="form-control" name="titulo" id="titulo" placeholder="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="descricao" class="form-label">Descricao</label>
+                                        <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Perguntar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+    </body>
+    <%- include('partials/footer.ejs') %>

@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+            <div class="container">
+
+                <h3>Pessoas</h3>
+
+
+
+                <div class="card mt-3">
+                    <div class="card-body">
+
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#id</th>
+                                    <th scope="col">nome</th>
+                                    <th scope="col">idade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% pessoas.forEach(pess=> { %>
+                                    <tr>
+                                        <th scope="row"># <%= pess.id%>
+                                        </th>
+                                        <td>
+                                            <%= pess.nome %>
+                                        </td>
+                                        <td>
+                                            <%= pess.idade %>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <br><br>
+
+
+    </body>
+    <%- include('partials/footer.ejs') %>
